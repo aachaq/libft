@@ -6,8 +6,16 @@
 /*   By: aachaq <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:47:46 by aachaq            #+#    #+#             */
-/*   Updated: 2021/11/16 23:53:40 by aachaq           ###   ########.fr       */
+/*   Updated: 2021/11/30 22:36:03 by aachaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_toupper
+int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+	{
+		return (c - 32);
+	}
+	return (c);
+}

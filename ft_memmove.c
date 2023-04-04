@@ -1,20 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aachaq <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 22:38:39 by aachaq            #+#    #+#             */
-/*   Updated: 2021/12/02 19:45:23 by aachaq           ###   ########.fr       */
+/*   Created: 2021/11/27 18:44:02 by aachaq            #+#    #+#             */
+/*   Updated: 2022/02/07 02:46:45 by aachaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	*ft_memmove(void	*dst, const	void	*src, size_t	len)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	unsigned char	*srce;
+	unsigned char	*dest;
+	size_t			j;
+
+	srce = (unsigned char *)src;
+	dest = (unsigned char *)dst;
+	if (!dst && !src)
+		return (NULL);
+	if (dest > srce)
+	{
+		while (len-- > 0)
+		{
+			dest[len] = srce[len];
+		}
+	}
+	else
+	{
+		j = 0;
+		while (j < len)
+		{
+			dest[j] = srce[j];
+			j++;
+		}
+	}
+	return (dst);
 }

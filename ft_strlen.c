@@ -6,11 +6,10 @@
 /*   By: aachaq <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:44:51 by aachaq            #+#    #+#             */
-/*   Updated: 2021/11/16 23:30:24 by aachaq           ###   ########.fr       */
+/*   Updated: 2022/01/31 12:06:46 by aachaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const	char	*s)
 {
@@ -22,12 +21,4 @@ size_t	ft_strlen(const	char	*s)
 		i++;
 	}
 	return (i);
-}
-
-int main(void)
-{
-	const 	char	i[5] = "abcd";
-	printf("%zu\n", ft_strlen(i));
-	printf("%zu\n", strlen(i));
-	return (0);
 }
